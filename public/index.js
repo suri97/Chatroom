@@ -8,7 +8,7 @@ var username;
 
 $.get('/showchats', (rows) => {
     var data = "";
-    for (var i = 1;i<rows.length-1;i++) data += '<li class="list-group-item">' + rows[i].msg + '</li>';
+    for (var i = 1;i<rows.length;i++) data += '<li class="list-group-item">' + rows[i].msg + '</li>';
     $('#list').append(data);
     $("#list").animate({ scrollTop: $('#list').prop("scrollHeight")}, 1000);
 });
