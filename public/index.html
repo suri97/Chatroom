@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatRoom</title>
+    <script src = "jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</head>
+<body style="padding: 9%;">
+
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <a class = "navbar-brand" href="#">Chatroom</a>
+        <div class="nav navbar-nav pull-sm-right" >
+            <a class="nav-item nav-link active" style="padding-right: 1em" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" style="padding-right: 1em" href="#">About Us</a>
+            <a class="nav-item nav-link" style="padding-right: 1em" href="#">Contact Us</a>
+        </div>
+</nav>
+
+<div class="card" style="width: 60%;margin-left: 18%;">
+    <div class="card-header">
+        ChatBox
+    </div>
+    <div class="card-block">
+        <br>
+            <div class="card" >
+                <ul class="list-group list-group-flush" id="list" style="overflow: auto; height: 300px; font-family: Serif; font-size: 1.3em ">
+
+                </ul>
+            </div>
+        </div>
+        <br>
+        <div class="card-footer ">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <input type="text" id = "name" class="form-control" placeholder="Name">
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="input-group">
+                    <input type="text" id = "msg" class="form-control" placeholder="Message">
+                    <span class="input-group-btn">
+        <button class="btn btn-secondary" id="send" type="button">Send</button>
+      </span>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+</div>
+</body>
+</html>
