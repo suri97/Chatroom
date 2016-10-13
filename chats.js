@@ -16,7 +16,6 @@ var getConnection = function () {
 
     return connection;
 };
-
 module.exports = {
     show : (cb) => {
         let connection = getConnection();
